@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo 1 - Manipulación DOM con AMD</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; }
+        #app {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+        }
+        h1 { margin-bottom: 10px; }
+        h2 { margin: 20px 0 10px; font-size: 18px; }
+        p.desc { margin-bottom: 20px; color: #666; }
+        section { margin-bottom: 24px; }
+        button {
+            padding: 8px 16px;
+            margin: 4px;
+            border: none;
+            border-radius: 4px;
+            background: #0066cc;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover { opacity: 0.85; }
+        #hidden-panel {
+            display: none;
+            padding: 20px;
+            margin-top: 10px;
+            background: #f0f8ff;
+            border: 1px dashed #0066cc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Ejemplo 1: DOM + Estilos + Notificaciones</h1>
+        <p class="desc">Tres módulos AMD: <code>dom.js</code> (sin deps), <code>styles.js</code> (sin deps), <code>notification.js</code> (depende de ambos).</p>
+
+        <section>
+            <h2>Cards generadas dinámicamente</h2>
+            <div id="main-content"></div>
+        </section>
+
+        <section>
+            <h2>Cambiar tema</h2>
+            <div id="theme-section"></div>
+        </section>
+
+        <section>
+            <h2>Notificaciones</h2>
+            <div id="notification-section"></div>
+        </section>
+
+        <section>
+            <h2>Toggle Panel</h2>
+            <button id="toggle-panel">Mostrar/Ocultar panel</button>
+            <div id="hidden-panel">
+                <p>🎉 Este panel se muestra y oculta con el módulo <code>dom.toggle()</code></p>
+            </div>
+        </section>
+
+    </div>
+
+    <script data-main="js/app" src="js/require.js"></script>
+</body>
+</html>

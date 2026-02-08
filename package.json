@@ -1,0 +1,21 @@
+{
+  "name": "amd-practice",
+  "version": "1.0.0",
+  "description": "7 ejemplos progresivos de módulos AMD con RequireJS",
+  "scripts": {
+    "ex1": "npx grunt serve --example=example1-dom",
+    "ex2": "npx grunt serve --example=example2-forms",
+    "ex3": "npx grunt serve --example=example3-jquery",
+    "ex4": "npx grunt serve --example=example4-ajax",
+    "ex5": "npx grunt serve --example=example5-tabs",
+    "ex6": "npx grunt serve --example=example6-crud",
+    "ex7": "npx grunt serve --example=example7-events",
+    "setup": "node setup.js"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-connect": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "requirejs": "^2.3.7"
+  }
+}
