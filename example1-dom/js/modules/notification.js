@@ -6,8 +6,6 @@
 define(['modules/dom', 'modules/styles'], function (dom, styles) {
     'use strict';
 
-    let variable_uno = "Hola";
-    const variable_dos = "Adios";
     var container = null;
     var notificationCount = 0;
 
@@ -44,8 +42,6 @@ define(['modules/dom', 'modules/styles'], function (dom, styles) {
          */
         show: function (message, type, duration) {
             ensureContainer();
-            console.log(variable_uno);
-            console.log(variable_dos);
             type = type || 'info';
             duration = (duration !== undefined) ? duration : 3000;
             notificationCount++;
